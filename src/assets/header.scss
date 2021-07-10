@@ -1,0 +1,22 @@
+#app-header {
+  border-bottom: solid 1px $border_color;
+  @media (max-width: 1025px) {
+    padding: 0 15px;
+  }
+  .h-c {
+    @include app_flex(row, center, space-between);
+    .h-l {
+      .logo {
+        font-weight: 800;
+      }
+    }
+    .h-r {
+      .basket-btn-w {
+        > span {
+          display: block;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+}

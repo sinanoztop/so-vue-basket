@@ -28,6 +28,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^2.0.0-0",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
@@ -51,7 +52,15 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {},
+    "rules": {
+      "no-unused-vars": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    },
     "overrides": [
       {
         "files": [
@@ -66,9 +75,15 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
-    "not dead"
+    "last 7 versions"
   ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "grid": "autoplace"
+      }
+    }
+  },
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest",
     "transform": {
